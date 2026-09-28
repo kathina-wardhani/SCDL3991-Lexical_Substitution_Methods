@@ -1,0 +1,156 @@
+@inproceedings{wiegmann2022language,
+    title = "Language Models as Context-sensitive Word Search Engines",
+    author = {Wiegmann, Matti  and
+      V{\"o}lske, Michael  and
+      Stein, Benno  and
+      Potthast, Martin},
+    editor = "Huang, Ting-Hao 'Kenneth'  and
+      Raheja, Vipul  and
+      Kang, Dongyeop  and
+      Chung, John Joon Young  and
+      Gissin, Daniel  and
+      Lee, Mina  and
+      Gero, Katy Ilonka",
+    booktitle = "Proceedings of the First Workshop on Intelligent and Interactive Writing Assistants (In2Writing 2022)",
+    month = may,
+    year = "2022",
+    address = "Dublin, Ireland",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.in2writing-1.5/",
+    doi = "10.18653/v1/2022.in2writing-1.5",
+    pages = "39--45",
+    abstract = "Context-sensitive word search engines are writing assistants that support word choice, phrasing, and idiomatic language use by indexing large-scale n-gram collections and implementing a wildcard search. However, search results become unreliable with increasing context size (e.g., n{\ensuremath{>}}=5), when observations become sparse. This paper proposes two strategies for word search with larger n, based on masked and conditional language modeling. We build such search engines using BERT and BART and compare their capabilities in answering English context queries with those of the n-gram-based word search engine Netspeak. Our proposed strategies score within 5 percentage points MRR of n-gram collections while answering up to 5 times as many queries."
+}
+
+@misc{calderwood2025phraselette,
+      title={Phraselette: A Poet's Procedural Palette}, 
+      author={Alex Calderwood and John Joon Young Chung and Yuqian Sun and Melissa Roemmele and Max Kreminski},
+      year={2025},
+      eprint={2503.06335},
+      archivePrefix={arXiv},
+      primaryClass={cs.HC},
+      url={https://arxiv.org/abs/2503.06335}, 
+}
+
+@article{wise2024sparking,
+  author  = {Wise, Talia A. and Kenett, Yoed N.},
+  title   = {Sparking creativity: Encouraging creative idea generation through automatically generated word recommendations},
+  journal = {Behavior Research Methods},
+  year    = {2024},
+  volume  = {56},
+  pages   = {7939--7962},
+  doi     = {10.3758/s13428-024-02463-8}
+}
+
+@article{singh2022elephant,
+author = {Singh, Nikhil and Bernal, Guillermo and Savchenko, Daria and Glassman, Elena L.},
+title = {Where to Hide a Stolen Elephant: Leaps in Creative Writing with Multimodal Machine Intelligence},
+year = {2023},
+issue_date = {October 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {30},
+number = {5},
+issn = {1073-0516},
+url = {https://doi.org/10.1145/3511599},
+doi = {10.1145/3511599},
+abstract = {While developing a story, novices and published writers alike have had to look outside themselves for inspiration. Language models have recently been able to generate text fluently, producing new stochastic narratives upon request. However, effectively integrating such capabilities with human cognitive faculties and creative processes remains challenging. We propose to investigate this integration with a multimodal writing support interface that offers writing suggestions textually, visually, and aurally. We conduct an extensive study that combines elicitation of prior expectations before writing, observation and semi-structured interviews during writing, and outcome evaluations after writing. Our results illustrate the individual and situational variation in machine-in-the-loop writing approaches, suggestion acceptance, and ways the system is helpful. Centrally, we report how participants perform integrative leaps, by which they do cognitive work to integrate suggestions of varying semantic relevance into their developing stories. We interpret these findings, offering modeling and design recommendations for future creative writing support technologies.},
+journal = {ACM Trans. Comput.-Hum. Interact.},
+month = sep,
+articleno = {68},
+numpages = {57},
+keywords = {Creativity support, story, writing, multimodal, audio, images, audiovisual, interface, AI, human-AI interaction}
+}
+
+@inproceedings{zhou2019bert,
+    title = "{BERT}-based Lexical Substitution",
+    author = "Zhou, Wangchunshu  and
+      Ge, Tao  and
+      Xu, Ke  and
+      Wei, Furu  and
+      Zhou, Ming",
+    editor = "Korhonen, Anna  and
+      Traum, David  and
+      M{\`a}rquez, Llu{\'i}s",
+    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2019",
+    address = "Florence, Italy",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P19-1328/",
+    doi = "10.18653/v1/P19-1328",
+    pages = "3368--3373",
+    abstract = "Previous studies on lexical substitution tend to obtain substitute candidates by finding the target word{'}s synonyms from lexical resources (e.g., WordNet) and then rank the candidates based on its contexts. These approaches have two limitations: (1) They are likely to overlook good substitute candidates that are not the synonyms of the target words in the lexical resources; (2) They fail to take into account the substitution{'}s influence on the global context of the sentence. To address these issues, we propose an end-to-end BERT-based lexical substitution approach which can propose and validate substitute candidates without using any annotated data or manually curated resources. Our approach first applies dropout to the target word{'}s embedding for partially masking the word, allowing BERT to take balanced consideration of the target word{'}s semantics and contexts for proposing substitute candidates, and then validates the candidates based on their substitution{'}s influence on the global contextualized representation of the sentence. Experiments show our approach performs well in both proposing and ranking substitute candidates, achieving the state-of-the-art results in both LS07 and LS14 benchmarks."
+}
+
+@inproceedings{omarov2023grounding,
+    title = "Grounding the Lexical Substitution Task in Entailment",
+    author = "Omarov, Talgat  and
+      Kondrak, Grzegorz",
+    editor = "Rogers, Anna  and
+      Boyd-Graber, Jordan  and
+      Okazaki, Naoaki",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.findings-acl.179/",
+    doi = "10.18653/v1/2023.findings-acl.179",
+    pages = "2854--2869",
+    abstract = "Existing definitions of lexical substitutes are often vague or inconsistent with the gold annotations. We propose a new definition which is grounded in the relation of entailment; namely, that the sentence that results from the substitution should be in the relation of mutual entailment with the original sentence. We argue that the new definition is well-founded and supported by previous work on lexical entailment. We empirically validate our definition by verifying that it covers the majority of gold substitutes in existing datasets. Based on this definition, we create a new dataset from existing semantic resources. Finally, we propose a novel context augmentation method motivated by the definition, which relates the substitutes to the sense of the target word by incorporating glosses and synonyms directly into the context. Experimental results demonstrate that our augmentation approach improves the performance of lexical substitution systems on the existing benchmarks."
+}
+
+@inproceedings{gero2019stylistic,
+author = {Gero, Katy Ilonka and Chilton, Lydia B.},
+title = {How a Stylistic, Machine-Generated Thesaurus Impacts a Writer's Process},
+year = {2019},
+isbn = {9781450359177},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3325480.3326573},
+doi = {10.1145/3325480.3326573},
+abstract = {Writers regularly use a thesaurus to help them write well; the thesaurus is one of the few widespread writing support tools and many writers find it integral to their writing practice. A normal thesaurus is hand-crafted and structured around strict synonymy for a given word sense. However, writers rarely look for a perfectly synonymous word -- instead they have additional ideas or constraints, such as words that are less cliche, more specific, or less gendered. Poets describe their usage as searching for words that "hold more interesting connotations." We present a machine learning approach to thesaurus generation, using word embeddings, that leverages stylistically distinct corpora -- such as naturalist writing, novels by a particular author, or writing from a technical discipline. We show examples of how stylistic thesauruses differ from each other and from a regular thesaurus, as well as preliminary responses from two writers who are given multiple stylistic thesauruses. Writers describe these thesauruses as reflective of style, unique from each other, and more exploratory and associative than a regular thesaurus. They also describe an increased attention to connotation. We outline plans for quantitative evaluation of stylistic thesauruses, and user studies to understand their impact on specific tasks.},
+booktitle = {Proceedings of the 2019 Conference on Creativity and Cognition},
+pages = {597–603},
+numpages = {7},
+keywords = {writing support, natural language processing, human-computer interaction, creativity support tools},
+location = {San Diego, CA, USA},
+series = {C&C '19}
+}
+
+@inproceedings{seneviratne2022cilex,
+    title = "{CIL}ex: An Investigation of Context Information for Lexical Substitution Methods",
+    author = "Seneviratne, Sandaru  and
+      Daskalaki, Elena  and
+      Lenskiy, Artem  and
+      Suominen, Hanna",
+    editor = "Calzolari, Nicoletta  and
+      Huang, Chu-Ren  and
+      Kim, Hansaem  and
+      Pustejovsky, James  and
+      Wanner, Leo  and
+      Choi, Key-Sun  and
+      Ryu, Pum-Mo  and
+      Chen, Hsin-Hsi  and
+      Donatelli, Lucia  and
+      Ji, Heng  and
+      Kurohashi, Sadao  and
+      Paggio, Patrizia  and
+      Xue, Nianwen  and
+      Kim, Seokhwan  and
+      Hahm, Younggyun  and
+      He, Zhong  and
+      Lee, Tony Kyungil  and
+      Santus, Enrico  and
+      Bond, Francis  and
+      Na, Seung-Hoon",
+    booktitle = "Proceedings of the 29th International Conference on Computational Linguistics",
+    month = oct,
+    year = "2022",
+    address = "Gyeongju, Republic of Korea",
+    publisher = "International Committee on Computational Linguistics",
+    url = "https://aclanthology.org/2022.coling-1.362/",
+    pages = "4124--4135",
+    abstract = "Lexical substitution, which aims to generate substitutes for a target word given a context, is an important natural language processing task useful in many applications. Due to the paucity of annotated data, existing methods for lexical substitution tend to rely on manually curated lexical resources and contextual word embedding models. Methods based on lexical resources are likely to miss relevant substitutes whereas relying only on contextual word embedding models fails to provide adequate information on the impact of a substitute in the entire context and the overall meaning of the input. We proposed CILex, which uses contextual sentence embeddings along with methods that capture additional context information complimenting contextual word embeddings for lexical substitution. This ensured the semantic consistency of a substitute with the target word while maintaining the overall meaning of the sentence. Our experimental comparisons with previously proposed methods indicated that our solution is now the state-of-the-art on both the widely used LS07 and CoInCo datasets with P@1 scores of 55.96{\%} and 57.25{\%} for lexical substitution. The implementation of the proposed approach is available at \url{https://github.com/sandaruSen/CILex} under the MIT license."
+}
