@@ -39,13 +39,13 @@ Computational approaches to word suggestion have largely developed around lexica
 For creative writing, however, preserving the original expression is only part of the picture. Work on creativity support shows that generated material can contribute without functioning as a direct replacement. Singh et al. describe ``integrative leaps,'' where writers did additional work to incorporate generated material of varying semantic relevance into developing stories \cite{singh2022elephant}. The semantic distance and direction of word recommendations have also been shown to affect subsequent idea generation
 \cite{wise2024sparking}. Together with observations of thesaurus use \cite{gero2019stylistic}, this suggests that a lexical suggestion can be valuable both for how well it fits what a writer has already expressed and for the alternatives it makes available to explore.
 
-This makes it useful to look past a single notion of a ``good'' lexical suggestion. We characterize suggestion sets along three dimensions: \emph{semantic alignment}, or how closely suggestions preserve the existing expression; \emph{linguistic plausibility}, or how probable and well-formed they are in context; and \emph{exploratory range}, or how far a set extends beyond semantically similar alternatives. Different lexical suggestion methods may occupy this space distinctively, without any one profile necessarily being preferable for writing.
-\question{Is ``linguistic plausibility'' the right term given $\Delta$PLL and surprisal? Does surprisal belongs here or under exploration?}
+We therefore compare several ways of generating word suggestions for creative writing, from conventional lexical resources and a masked language model to instruction-tuned language models prompted for meaning-preserving or more exploratory alternatives. We consider both the properties of individual suggestions---how well they preserve the original meaning, how the substitution changes the likelihood of the sentence, how predictable the suggested word is in context, and how rare it is---and the diversity of the alternatives produced as a set. This allows us to compare methods without assuming that any one property defines a ``good'' suggestion.
+% \question{Is ``linguistic plausibility'' the right term given $\Delta$PLL and surprisal? Does surprisal belongs here or under exploration?}
 
-What a method suggests also depends on the context it receives. In lexical substitution, surrounding context is used to identify substitutes appropriate to a particular occurrence and to preserve sentence meaning \cite{zhou2019bert,seneviratne2022cilex}. Context-sensitive word search similarly uses surrounding language to rank alternatives for writers \cite{wiegmann2022language}. Creative writing provides context at several possible scopes, from the immediate sentence to a broader passage or information about the writer's language. Rather than treating context only as a way to improve substitution quality, we explore how changing the information available to a method changes the profile of suggestions it produces.
+What a method suggests also depends on the context it receives. In lexical substitution, surrounding context is used to identify substitutes appropriate to a particular occurrence and to preserve sentence meaning \cite{zhou2019bert,seneviratne2022cilex}. Context-sensitive word search similarly uses surrounding language to rank alternatives for writers \cite{wiegmann2022language}. Creative writing also provides information beyond the immediate sentence, including the surrounding passage and examples of a writer's language. For the language-model methods, we test whether providing this broader document-level context changes the suggestions they produce.
 \question{Replace the final sentence if context conditions test something narrower than sentence/passage/writer-language scope.}
 
-Nevertheless, these computational profiles cannot show us how writers will react to a suggestion. A semantically distant candidate might prompt a new direction or prove unhelpful, while a closely aligned candidate might provide the refinement a writer is looking for. Prior work also shows that writers can adapt and build upon generated material rather than accepting it outright \cite{singh2022elephant}. We therefore pair our computational comparison with a writer study to examine how suggestions with different profiles are used, rejected, adapted, and built upon.
+Although these measures can characterize differences between methods, they cannot tell us how writers will respond to them. A semantically distant candidate might prompt a new direction or prove unhelpful, while a closely aligned candidate might provide the refinement a writer is looking for. Prior work also shows that writers can adapt and build upon generated material rather than accepting it outright \cite{singh2022elephant}. We therefore pair our computational comparison with a writer study to examine how suggestions with different profiles are used, rejected, adapted, and built upon.
 
 Against this background, we ask:
 \begin{itemize}
@@ -54,12 +54,11 @@ Against this background, we ask:
     \setlength{\parsep}{0pt}
     \setlength{\topsep}{3pt}
     \setlength{\partopsep}{0pt}
-    \item[\textbf{RQ1}] How do lexical suggestion methods differ in semantic alignment, linguistic plausibility, and exploratory range?
-    \item[\textbf{RQ2}] How do different forms and scopes of writing context shift these profiles?
+    \item[\textbf{RQ1}] How do lexical suggestion methods differ in the
+properties of individual suggestions and the sets of alternatives they produce?
+    \item[\textbf{RQ2}] How does additional document-level context change the suggestions produced by language-model methods?
     \item[\textbf{RQ3}] How do writers use, reject, adapt, and build upon suggestions with different profiles?
 \end{itemize}
-
-To address these questions, we compare lexical-resource, masked language-model, and generative language-model approaches under different context conditions. We first characterize the suggestion sets they produce computationally, then investigate how writers respond to suggestions with different profiles.
 
 % TODO: Add findings once the computational analysis and writer study are finalized.
 \result{We find that (1) ...; (2) ...; and (3) ....}
@@ -105,24 +104,18 @@ To address these questions, we compare lexical-resource, masked language-model, 
 % author examples / other context conditions
 
 \subsection{Evaluation Measures}
-% Alignment:
-%   semantic similarity / preservation proxies
-%   plausibility / naturalness
+% Individual-suggestion properties:
+%   semantic preservation: sentence STS + target-span similarity
+%   change in sentence likelihood: delta PLL
+%   contextual predictability: pseudo-surprisal / context gain
+%   lexical rarity: word frequency
 %
-% Exploration:
-%   lexical rarity
-%   surprisal
-%   semantic diversity
+% Suggestion-set properties:
+%   diversity
 %
-% Descriptive:
-%   yield
-%   overlap
-%
-% IMPORTANT:
-% These are proxies. Do not equate:
-% similarity = intent preservation
-% surprisal = creativity
-% diversity = quality
+% Additional descriptive analyses:
+%   uniqueness / overlap
+%   yield / latency
 
 \subsection{Experimental Setup}
 % passages
